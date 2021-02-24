@@ -12,9 +12,9 @@ const Dashboard = () => {
   React.useEffect(() => {
     axios
       .all([
-        axios.get(`${constants.api_url}api/movies/gross`),
-        axios.get(`${constants.api_url}api/movies/rating`),
-        axios.get(`${constants.api_url}api/movies/duration`),
+        axios.get(`${constants.api_url}/crew/movies/gross`),
+        axios.get(`${constants.api_url}/crew/movies/rating`),
+        axios.get(`${constants.api_url}/crew/movies/duration`),
       ])
       .then((response) => {
         setGrosses(response[0].data);

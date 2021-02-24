@@ -18,10 +18,17 @@ export default function Router() {
   }, []);
   const fetchData = () => {
     axios
-      .all([
-        axios.get(`${constants.api_url}api/movies`),
-        axios.get(`${constants.api_url}api/movies/category`),
-      ])
+      .all(
+        [
+          axios.get(`${constants.api_url}/crew/movies`),
+          axios.get(`${constants.api_url}/crew/movies/category`),
+        ],
+        {
+          headers: {
+            Authorization: `${constants.api_key}`,
+          },
+        }
+      )
       .then((response) => {
         setMovies(response[0].data);
         setInitMovies(response[0].data);

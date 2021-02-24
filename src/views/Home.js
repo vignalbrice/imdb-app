@@ -67,11 +67,9 @@ const Home = ({
             <p className="display-4">Top 1000 Movies</p>
             <div className="col-2">
               <Form.Control as="select" onChange={(e) => onChangeCategory(e)}>
-                <option selected value="Tous">
-                  Tous
-                </option>
+                <option defaultValue="Tous">Tous</option>
                 {categories.map((c, i) => (
-                  <option value={c.Category} key={c.i}>
+                  <option value={c.Category} key={i}>
                     {c.Category}
                   </option>
                 ))}
