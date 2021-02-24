@@ -25,7 +25,7 @@ const Details = ({ movies }) => {
         <div className="container-fluid px-5 pt-5">
           <div className="details">
             <div className="detail-image">
-              <img src={d.Image} alt="image" />
+              <img src={d.Image} alt="detail-image-movie" />
             </div>
             <div className="detail-content">
               <p className="h3">
