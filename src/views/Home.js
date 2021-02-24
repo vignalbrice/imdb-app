@@ -10,7 +10,7 @@ const Home = ({
   setMovies,
 }) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [translateValue, setTranslateValue] = React.useState("");
+  const [translateValue] = React.useState("");
   const [currentPage, setCurrentPage] = React.useState(1);
 
   const itemPerPage = 12;
@@ -101,7 +101,7 @@ const Home = ({
   } else {
     return (
       <div className="loader">
-        <img src="./loader.gif" className="loader-img" />
+        <img src="./loader.gif" className="loader-img" alt="loader" />
       </div>
     );
   }

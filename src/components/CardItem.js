@@ -12,7 +12,7 @@ const CardItem = ({ movie }) => {
       <div className="card card-movie">
         <div className="card-rank">{movie.Rank}</div>
         <div className="card-image">
-          <img src={movie.Image} />
+          <img src={movie.Image} alt="movie" />
         </div>
         <div className="card-content">
           <p className="title">{movie.Title}</p>
